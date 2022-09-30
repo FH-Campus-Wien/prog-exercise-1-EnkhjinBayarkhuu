@@ -58,15 +58,9 @@ public class App {
 
                 int sum = int_z + int_face + octal + int_long + int_double +  int_float + int_double8 + int_double9;
 
-
                 System.out.println(sum);
 
-
                 // Hilfe von: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
-
-
-
-
 
     }
 
@@ -84,19 +78,43 @@ public class App {
     //todo Task 5
     public void swapTwoNumbers(){
         // input your solution here
-        int x = 9;
-        int y = 4;
+        Scanner scanner = new Scanner(System.in);
 
-        int tmp = x;
-        tmp = x;
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        int temp;
+        System.out.println("Befor swap" + x + " " +y);
+        temp = x;
         x = y;
-        y = tmp;
+        y = temp;
+        System.out.println("After swap" + x +"," + y);
+
 
     }
 
     //todo Task 6
     public void compareTwoNumbers(){
         // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        int number1 = scanner.nextInt();
+        int number2 = scanner.nextInt();
+
+       // System.out.println("n1: "+number1 + " n2: "+number2); //2
+       // System.out.println("n2: "+number2);  //5
+       // System.out.println("n1: " + " n2: "); //2
+
+        if (number1 > number2) {
+            System.out.println("n1: " + "n2: "+ "n1 > n2");
+           // System.out.println("n1 > n2");
+        }
+        if (number2>number1) {
+            System.out.println("n1: " + " n2: "+ "n2 > n1");
+          // System.out.println("n2 > n1");
+        }
+        if (number1==number2){
+            System.out.println("n1: " + " n2: "+ "n1 == n2");
+          //  System.out.println("n1 == n2");
+        }
 
     }
 
