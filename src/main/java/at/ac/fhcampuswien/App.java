@@ -199,6 +199,16 @@ public class App {
     //todo Task 10
     public void transposedNumbers(){
         // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Number: ");
+
+        int numbers = scanner.nextInt();
+
+        StringBuffer stringBuffer = new StringBuffer(String.valueOf(numbers));
+        StringBuffer transposednumber = stringBuffer.reverse();
+
+        System.out.println(transposednumber);
+
 
     }
 
