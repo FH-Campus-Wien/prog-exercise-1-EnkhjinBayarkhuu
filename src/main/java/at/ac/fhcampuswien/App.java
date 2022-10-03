@@ -180,6 +180,21 @@ public class App {
     //todo Task 9
     public void leapyear(){
         // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Year: ");
+        int year = scanner.nextInt();
+
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+        {
+            System.out.println("Leapyear");
+        }
+        else if(year % 100 == 0 || year % 400 != 0 )
+        {
+            System.out.println("Not a Leapyear");
+        }
+
+        //help from https://stackoverflow.com/questions/1021324/java-code-for-calculating-leap-year
+
     }
 
     //todo Task 10
