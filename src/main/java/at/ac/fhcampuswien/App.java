@@ -2,19 +2,20 @@ package at.ac.fhcampuswien;
 
 import org.graalvm.compiler.phases.graph.ScheduledNodeIterator;
 
+import javax.sound.midi.SysexMessage;
 import javax.swing.*;
 import java.util.Scanner;
 
 public class App {
 
     //todo Task 1
-    public void sayHelloWorld(){
+    public void sayHelloWorld() {
         // input your solution here
         System.out.println("Hello World!");
     }
 
     //todo Task 2
-    public void helloRobot(){
+    public void helloRobot() {
         // input your solution here
         System.out.println("0123456789012345678901");
         System.out.println("         __");
@@ -30,75 +31,72 @@ public class App {
     }
 
     //todo Task 3
-    public void sumOfLiterals(){
+    public void sumOfLiterals() {
         // input your solution here
 
-                char z = 'Z';
-                int int_z = z;
+        char z = 'Z';
+        int int_z = z;
 
-                String face = "0xface";
-                int int_face = Integer.decode(face);
+        String face = "0xface";
+        int int_face = Integer.decode(face);
 
-                int octal = 012;
+        int octal = 012;
 
-                Long long_wert = 80L;
-                int int_long = Math.toIntExact(long_wert);
+        Long long_wert = 80L;
+        int int_long = Math.toIntExact(long_wert);
 
-                double double_wert = 44e-1f;
-                int int_double =(int) double_wert;
+        double double_wert = 44e-1f;
+        int int_double = (int) double_wert;
 
-                float float_wert = 5.5f;
-                int int_float = (int) float_wert;
+        float float_wert = 5.5f;
+        int int_float = (int) float_wert;
 
-                double double_wert8 = 8.88e1;
-                int int_double8 = (int) double_wert8;
+        double double_wert8 = 8.88e1;
+        int int_double8 = (int) double_wert8;
 
-                double double_wert9 = 99.9;
-                int int_double9 = (int) double_wert9;
+        double double_wert9 = 99.9;
+        int int_double9 = (int) double_wert9;
 
-                int sum = int_z + int_face + octal + int_long + int_double +  int_float + int_double8 + int_double9;
-
-
-                System.out.println(sum);
+        int sum = int_z + int_face + octal + int_long + int_double + int_float + int_double8 + int_double9;
 
 
-                // Hilfe von: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+        System.out.println(sum);
 
 
-
+        // Hilfe von: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
 
 
     }
 
     //todo Task 4
-    public void addTwoNumbers(){
+    public void addTwoNumbers() {
         // input your solution here
-      Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-      int number1 = scanner.nextInt();
-      int number2 = scanner.nextInt();
-      System.out.println(number1 + number2);
+        int number1 = scanner.nextInt();
+        int number2 = scanner.nextInt();
+        System.out.println(number1 + number2);
 
     }
 
     //todo Task 5
-    public void swapTwoNumbers(){
+    public void swapTwoNumbers() {
         // input your solution here
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Before Swap:" );
+        System.out.println("Before Swap:");
 
-        int x = scanner.nextInt() ;
+        int x = scanner.nextInt();
         int y = scanner.nextInt();
 
-       // System.out.println("x: y: ");
+        // System.out.println("x: y: ");
 
-        x = x^y;
-        y = x^y;
-        x = x^y;
+        x = x ^ y;
+        y = x ^ y;
+        x = x ^ y;
 
-        System.out.println("x: y: "+"After Swap:");
-        System.out.println("x: "+x);
-        System.out.println("y: "+y);
+        System.out.println("x: y: " + "After Swap:");
+        System.out.println("x: " + x);
+        System.out.println("y: " + y);
 
         //help from: https://www.geeksforgeeks.org/java-program-to-swap-two-numbers-using-bitwise-xor-operation/
 
@@ -106,7 +104,7 @@ public class App {
     }
 
     //todo Task 6
-    public void compareTwoNumbers(){
+    public void compareTwoNumbers() {
         // input your solution here
         Scanner scanner = new Scanner(System.in);
         int number1 = scanner.nextInt();
@@ -117,56 +115,66 @@ public class App {
         // System.out.println("n1: " + " n2: "); //2
 
         if (number1 > number2) {
-            System.out.println("n1: " + "n2: "+ "n1 > n2");
+            System.out.println("n1: " + "n2: " + "n1 > n2");
             // System.out.println("n1 > n2");
         }
-        if (number2>number1) {
-            System.out.println("n1: " + " n2: "+ "n2 > n1");
+        if (number2 > number1) {
+            System.out.println("n1: " + "n2: " + "n2 > n1");
             // System.out.println("n2 > n1");
         }
-        if (number1==number2){
-            System.out.println("n1: " + " n2: "+ "n1 == n2");
+        if (number1 == number2) {
+            System.out.println("n1: " + "n2: " + "n1 == n2");
             //  System.out.println("n1 == n2");
         }
 
     }
 
     //todo Task 7
-    public void ratingSalesPerson(){
+    public void ratingSalesPerson() {
         // input your solution here
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter annual Revenue: ");
         int revenue = scanner.nextInt();
 
-        if (revenue < 0 && revenue >= 100000)
-        {
+        if (revenue < 0 || revenue >= 100000) {
             System.out.println("Invalid Revenue");
-        }
-
-        else if (revenue >= 0 && revenue < 20000)
-        {
+        } else if (revenue >= 0 && revenue < 20000) {
             System.out.println("Poor Sales Revenue");
-        }
-
-        else if (revenue >= 20000 && revenue < 50000)
-        {
+        } else if (revenue >= 20000 && revenue < 50000) {
             System.out.println("Average Sales Revenue");
-        }
-        else if (revenue >= 50000 && revenue < 80000)
-        {
+        } else if (revenue >= 50000 && revenue < 80000) {
             System.out.println("Good Sales Revenue");
-        }
-        else if (revenue >= 80000 && revenue < 100000)
-        {
+        } else if (revenue >= 80000 && revenue < 100000) {
             System.out.println("Excellent Sales Revenue");
         }
 
     }
 
     //todo Task 8
-    public void getCommissionRate(){
+    public void getCommissionRate() {
         // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter CommissionClass: ");
+        int provision = scanner.nextInt();
+
+        switch (provision) {
+            case 1:
+                System.out.println( "Your Commission Rate was set to 0.01");
+                break;
+            case 2:
+                System.out.println("Your Commission Rate was set to 0.02");
+                break;
+            case 3:
+                System.out.println("Your Commission Rate was set to 0.03");
+                break;
+            case 4:
+                System.out.println("Your Commission Rate was set to 0.04");
+                break;
+            default:
+                System.out.println("Your Commission Rate was set to 0.0");
+
+        }
     }
 
     //todo Task 9
