@@ -58,9 +58,15 @@ public class App {
 
                 int sum = int_z + int_face + octal + int_long + int_double +  int_float + int_double8 + int_double9;
 
+
                 System.out.println(sum);
 
+
                 // Hilfe von: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+
+
+
+
 
     }
 
@@ -79,15 +85,22 @@ public class App {
     public void swapTwoNumbers(){
         // input your solution here
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Before Swap:" );
 
-        int x = scanner.nextInt();
+        int x = scanner.nextInt() ;
         int y = scanner.nextInt();
-        int temp;
-        System.out.println("Befor swap" + x + " " +y);
-        temp = x;
-        x = y;
-        y = temp;
-        System.out.println("After swap" + x +"," + y);
+
+       // System.out.println("x: y: ");
+
+        x = x^y;
+        y = x^y;
+        x = x^y;
+
+        System.out.println("x: y: "+"After Swap:");
+        System.out.println("x: "+x);
+        System.out.println("y: "+y);
+
+        //help from: https://www.geeksforgeeks.org/java-program-to-swap-two-numbers-using-bitwise-xor-operation/
 
 
     }
@@ -99,21 +112,21 @@ public class App {
         int number1 = scanner.nextInt();
         int number2 = scanner.nextInt();
 
-       // System.out.println("n1: "+number1 + " n2: "+number2); //2
-       // System.out.println("n2: "+number2);  //5
-       // System.out.println("n1: " + " n2: "); //2
+        // System.out.println("n1: "+number1 + " n2: "+number2); //2
+        // System.out.println("n2: "+number2);  //5
+        // System.out.println("n1: " + " n2: "); //2
 
         if (number1 > number2) {
             System.out.println("n1: " + "n2: "+ "n1 > n2");
-           // System.out.println("n1 > n2");
+            // System.out.println("n1 > n2");
         }
         if (number2>number1) {
             System.out.println("n1: " + " n2: "+ "n2 > n1");
-          // System.out.println("n2 > n1");
+            // System.out.println("n2 > n1");
         }
         if (number1==number2){
             System.out.println("n1: " + " n2: "+ "n1 == n2");
-          //  System.out.println("n1 == n2");
+            //  System.out.println("n1 == n2");
         }
 
     }
@@ -121,6 +134,34 @@ public class App {
     //todo Task 7
     public void ratingSalesPerson(){
         // input your solution here
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter annual Revenue: ");
+        int revenue = scanner.nextInt();
+
+        if (revenue < 0 && revenue >= 100000)
+        {
+            System.out.println("Invalid Revenue");
+        }
+
+        else if (revenue >= 0 && revenue < 20000)
+        {
+            System.out.println("Poor Sales Revenue");
+        }
+
+        else if (revenue >= 20000 && revenue < 50000)
+        {
+            System.out.println("Average Sales Revenue");
+        }
+        else if (revenue >= 50000 && revenue < 80000)
+        {
+            System.out.println("Good Sales Revenue");
+        }
+        else if (revenue >= 80000 && revenue < 100000)
+        {
+            System.out.println("Excellent Sales Revenue");
+        }
+
     }
 
     //todo Task 8
